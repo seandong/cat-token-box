@@ -13,11 +13,11 @@ services:
     volumes:
       - ./docker/pgdata:/var/lib/postgresql/data
     command: >
-      postgres -c shared_buffers=4GB
-               -c work_mem=64MB
-               -c maintenance_work_mem=2GB
+      postgres -c shared_buffers=8GB
+               -c work_mem=32MB
+               -c maintenance_work_mem=4GB
                -c effective_cache_size=24GB
-               -c max_wal_size=8GB
+               -c max_wal_size=16GB
                -c checkpoint_completion_target=0.9
                -c wal_buffers=128MB
                -c max_connections=300
